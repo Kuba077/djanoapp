@@ -6,7 +6,5 @@ def index(request):
     return render(request, 'pizza/index.html')
 
 def news(request):
-    return HttpResponse("Nowości")
-
-def menu(request):
-    return HttpResponse("Menu: ")
+    #return HttpResponse("Nowości")
+    return render(request, 'pizza/news.html')
