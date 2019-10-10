@@ -25,6 +25,8 @@ class Pizza(models.Model):
 
     def __str__(self):
         return self.nazwa
+    class Meta:
+        verbose_name_plural = "pizze"
 
 class Skladnik(models.Model):
     pizze = models.ManyToManyField( Pizza,
@@ -38,3 +40,5 @@ class Skladnik(models.Model):
 
     def __str__(self):
         return self.nazwa
+    class Meta:
+        verbose_name_plural = "skladniki"
