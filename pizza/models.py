@@ -30,7 +30,7 @@ class Pizza(models.Model):
 
 class Skladnik(models.Model):
     pizze = models.ManyToManyField( Pizza,
-                                    related_name='skladniki')
+                                    related_name='skladniki', null=True, blank=True)
 
     nazwa = models.CharField('skladnik', max_length=30)
     jarski = models.BooleanField('jarski?',
